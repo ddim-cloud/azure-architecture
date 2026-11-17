@@ -19,7 +19,7 @@ web_vm_size = "Standard_D2s_v5"
 
 # compute.tf - AKS
 kubernetes_version = "1.34"
-node_vm_size       = "Standard_D2s_v5"
+node_vm_size       = "Standard_D2ds_v5"
 node_min_count     = 2
 node_max_count     = 3
 
