@@ -2,7 +2,7 @@
 # WEB VM (nginx)
 ################################################################################
 module "web" {
-  source  = "ddimtfe.ddimtech.click/SKAX/vm/azurerm"
+  source  = "hctfe2.ddimtech.click/SKAX/vm/azurerm"
   version = "1.0.0"
 
   name                = "web-${var.name}"
@@ -24,7 +24,7 @@ module "web" {
 # AKS (WAS 계층)
 ################################################################################
 module "aks" {
-  source  = "ddimtfe.ddimtech.click/SKAX/aks/azurerm"
+  source  = "hctfe2.ddimtech.click/SKAX/aks/azurerm"
   version = "1.0.0"
 
   name                = var.name

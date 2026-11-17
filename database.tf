@@ -4,7 +4,7 @@ locals {
 }
 
 module "postgres" {
-  source  = "ddimtfe.ddimtech.click/SKAX/postgres/azurerm"
+  source  = "hctfe2.ddimtech.click/SKAX/postgres/azurerm"
   version = "1.0.0"
 
   name                = "psql-${var.name}-${local.unique}"

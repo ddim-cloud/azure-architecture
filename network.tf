@@ -8,7 +8,7 @@ resource "azurerm_resource_group" "this" {
 # Network Module (VNet, Subnet 3개, NSG)
 ################################################################################
 module "network" {
-  source  = "ddimtfe.ddimtech.click/SKAX/network/azurerm"
+  source  = "hctfe2.ddimtech.click/SKAX/network/azurerm"
   version = "1.0.0"
 
   name                = var.name
