@@ -5,6 +5,7 @@ name = "skax"
 tags = {
   Project   = "tfe-training"
   ManagedBy = "tfe"
+  Owner     = "infra-team"
 }
 
 # network.tf
