@@ -1,11 +1,6 @@
 ################################################################################
 # Common
 ################################################################################
-variable "subscription_id" {
-  type        = string
-  description = "배포 대상 Azure 구독 ID"
-}
-
 variable "location" {
   type        = string
   description = "Azure 리전"
@@ -54,11 +49,6 @@ variable "admin_cidr" {
 ################################################################################
 # Compute
 ################################################################################
-variable "ssh_public_key" {
-  type        = string
-  description = "VM 관리자 SSH 공개키"
-}
-
 variable "web_vm_size" {
   type        = string
   description = "WEB VM 크기"
@@ -103,8 +93,3 @@ variable "postgres_standby_zone" {
   default     = null
 }
 
-variable "postgres_password" {
-  type        = string
-  description = "PostgreSQL 관리자 비밀번호"
-  sensitive   = true
-}

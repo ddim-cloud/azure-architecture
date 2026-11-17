@@ -1,6 +1,11 @@
 ################################################################################
 # WEB VM (nginx)
 ################################################################################
+resource "tls_private_key" "web" {
+  algorithm = "RSA"
+  rsa_bits  = 4096
+}
+
 module "web" {
   source  = "hctfe2.ddimtech.click/SKAX/vm/azurerm"
   version = "1.0.0"
@@ -11,7 +16,7 @@ module "web" {
   subnet_id           = module.network.web_subnet_id
   vm_size             = var.web_vm_size
   zone                = "1"
-  ssh_public_key      = var.ssh_public_key
+  ssh_public_key      = tls_private_key.web.public_key_openssh
   public_ip           = true
 
   # 첫 부팅 때 1회 실행. 내용을 바꾸면 VM 재생성(-/+)
