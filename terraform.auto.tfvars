@@ -15,7 +15,7 @@ aks_subnet_cidr = "10.10.16.0/20"    # AKS 노드
 admin_cidr      = "59.13.125.146/32" # 관리자 공인 IP (curl ifconfig.me)
 
 # compute.tf - WEB VM
-web_vm_size = "Standard_B2s_v2"
+web_vm_size = "Standard_D2s_v5"
 
 # compute.tf - AKS
 kubernetes_version = "1.34"
@@ -24,6 +24,6 @@ node_min_count     = 2
 node_max_count     = 3
 
 # database.tf
-postgres_sku          = "B_Standard_B1ms"
+postgres_sku          = "GP_Standard_D2ds_v5"
 postgres_storage_mb   = 32768
 postgres_standby_zone = null
